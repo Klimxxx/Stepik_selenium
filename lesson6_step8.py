@@ -18,7 +18,7 @@ try:
     button = browser.find_element(By.XPATH, '//button[text()="Submit"]')
     button.click()
 
-#//img[@id='bullet']
+# //img[@id='bullet']
 finally:
     # успеваем скопировать код за 30 секунд
     time.sleep(10)

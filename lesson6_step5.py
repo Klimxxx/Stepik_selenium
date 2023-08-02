@@ -4,7 +4,7 @@ import time
 import math
 
 link = "http://suninjuly.github.io/find_link_text"
-text_1 = str(math.ceil(math.pow(math.pi, math.e)*10000))
+text_1 = str(math.ceil(math.pow(math.pi, math.e) * 10000))
 
 try:
     browser = webdriver.Chrome()
@@ -12,7 +12,6 @@ try:
 
     input0 = browser.find_element(By.LINK_TEXT, text_1)
     input0.click()
-
 
     input1 = browser.find_element(By.TAG_NAME, "input")
     input1.send_keys("Ivan")

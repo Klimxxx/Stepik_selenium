@@ -5,7 +5,6 @@ import time
 link1 = "http://suninjuly.github.io/registration1.html"
 link2 = "http://suninjuly.github.io/registration2.html"
 
-
 try:
     browser = webdriver.Chrome()
     browser.get(link1)
@@ -30,7 +29,7 @@ try:
     # записываем в переменную welcome_text текст из элемента welcome_text_elt
     welcome_text = welcome_text_elt.text
 
-# с помощью assert проверяем, что ожидаемый текст совпадает с текстом на странице сайта
+    # с помощью assert проверяем, что ожидаемый текст совпадает с текстом на странице сайта
     assert "Congratulations! You have successfully registered!" == welcome_text
 finally:
     time.sleep(1)
