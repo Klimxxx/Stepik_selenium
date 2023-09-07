@@ -1,7 +1,7 @@
 import time
 
 # webdriver это и есть набор команд для управления браузером
-from selenium import webdriver
+from selenium import  webdriver
 
 # импортируем класс By, который позволяет выбрать способ поиска элемента
 from selenium.webdriver.common.by import By
@@ -19,7 +19,7 @@ time.sleep(5)
 # Метод find_element позволяет найти нужный элемент на сайте, указав путь к нему. Способы поиска элементов мы обсудим позже
 # Метод принимает в качестве аргументов способ поиска и значение, по которому мы будем искать
 # Ищем поле для ввода текста
-textarea = driver.find_element(By.CSS_SELECTOR, ".textarea")
+textarea = driver.find_element(By. CSS_SELECTOR, ".textarea")
 
 # Напишем текст ответа в найденное поле
 textarea.send_keys("get()")
@@ -32,5 +32,5 @@ submit_button = driver.find_element(By.CSS_SELECTOR, ".submit-submission")
 submit_button.click()
 time.sleep(5)
 
-# после выполнения всех действия мы должны не забыть закрыть окно браузера
+#после выполнения всех действия мы должны не забыть закрыть окно браузера
 driver.quit()

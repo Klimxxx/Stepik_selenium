@@ -1,27 +1,33 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
+import math
 
-link = "http://suninjuly.github.io/find_xpath_form"
-browser = webdriver.Chrome()
+link = "http://suninjuly.github.io/find_link_text"
+text_1 = str(math.ceil(math.pow(math.pi, math.e)*10000))
+
 try:
+    browser = webdriver.Chrome()
     browser.get(link)
+
+    input0 = browser.find_element(By.LINK_TEXT, text_1)
+    input0.click()
+
+
     input1 = browser.find_element(By.TAG_NAME, "input")
     input1.send_keys("Ivan")
     input2 = browser.find_element(By.NAME, "last_name")
-    input2.send_keys("Pirogov")
-
-    input3 = browser.find_element(By.XPATH, '//input[@class="form-control city"]')
+    input2.send_keys("Petrov")
+    input3 = browser.find_element(By.CLASS_NAME, "city")
     input3.send_keys("Smolensk")
     input4 = browser.find_element(By.ID, "country")
-    input4.send_keys("Russland")
-    button = browser.find_element(By.XPATH, '//button[text()="Submit"]')
+    input4.send_keys("Russia")
+    button = browser.find_element(By.CSS_SELECTOR, "button.btn")
     button.click()
 
-# //img[@id='bullet']
 finally:
     # успеваем скопировать код за 30 секунд
-    time.sleep(10)
+    time.sleep(100)
     # закрываем браузер после всех манипуляций
     browser.quit()
 
