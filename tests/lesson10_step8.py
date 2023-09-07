@@ -10,7 +10,7 @@ import math
 def formula(x1):
     return str(math.log(abs(12 * math.sin(int(x1)))))
 
-browser = webdriver.Chrome()
+browser = webdriver.Firefox()
 
 try:
     browser.get("http://suninjuly.github.io/explicit_wait2.html")
